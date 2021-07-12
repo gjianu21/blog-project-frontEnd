@@ -1,0 +1,38 @@
+<div class="row screen-full-height">
+    <div class="col-md-6 login-logo-container container-center">
+        <img class="fx-grayscale-logo" alt="fx-grayscale-logo" src="../../../assets/img/logo17.png">
+    </div>
+    <div class="col-md-6">
+        <div class="container-center screen-full-height">
+        <div class="content">
+            <div class="title title-border">
+            <h4>Login to your account</h4>
+            </div>
+            <form id="login" (ngSubmit)="onSubmit()">
+            <!-- Username -->
+            <div class="form-group flex">
+                <i class="fa fa-user icon" aria-hidden="true"></i>
+                <div class="col">
+                <input type="text" class="form-control form-control-sm"
+                    placeholder="username" id="username" [(ngModel)]="user.userName"/>
+                </div>
+            </div>
+            <!-- Password -->
+            <div class="form-group flex">
+                <i class="fa fa-lock icon" aria-hidden="true"></i>
+                <div class="col">
+                <input type="password" class="form-control form-control-sm"
+                    placeholder="password" id="password" [(ngModel)]="user.password"/>
+                </div>
+                </div>
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+            <div class="text-container">
+                <span>You don't have an account?&nbsp;</span>
+                <a class="btn btn-link" [routerLink]="['/register']">Register</a>
+            </div>
+            </form>
+        </div>
+        </div>
+    </div>
+    </div>
+    

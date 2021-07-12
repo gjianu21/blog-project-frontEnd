@@ -1,0 +1,53 @@
+<div class="row screen-full-height">
+    <div class="col-md-6 login-logo-container container-center">
+        <img class="fx-grayscale-logo" alt="fx-logo" src="../../../assets/img/logo17.png">
+    </div>
+    <div class="col-md-6">
+        <div class="container-center screen-full-height">
+
+            <div class="content">
+                <div class="title title-border">
+                    <h4>Register a new account</h4>
+                </div>
+                <form id="register" (ngSubmit)="onSave()" #modalForm="ngForm">
+                    <div class="form-group flex">
+                        <div class="col">
+                            <label>Username</label>
+                            <input type="text" class="form-control form-control-sm" id="inputUsername"
+                                placeholder="username"
+                                [(ngModel)]="user.userName" />
+                        </div>
+                    </div>
+                    <div class="form-group flex">
+                        <div class="col">
+                            <label>Email</label>
+                            <input type="text" class="form-control form-control-sm" id="inputEmail"
+                                placeholder="email address" [(ngModel)]="user.email" />
+                        </div>
+                    </div>
+                    <div class="form-group flex">
+                        <div class="col">
+                            <label>Password</label>
+                            <input type="password" class="form-control form-control-sm" id="inputPassword"
+                                placeholder="password"
+                                [(ngModel)]="user.password" />
+                        </div>
+                    </div>
+                    <div class="form-group flex">
+                        <div class="col">
+                            <label>Confirm password</label>
+                            <input type="password" class="form-control form-control-sm" id="inputConfirmPassword"
+                                placeholder="confirm password"
+                                [(ngModel)]="user.secPassword" />
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Register</button>
+                    <div class="text-container">
+                        <span>Already have an account?&nbsp;</span>
+                        <a [routerLink]="['/login']" class="btn btn-link">Login</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
